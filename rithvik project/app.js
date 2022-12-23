@@ -59,14 +59,14 @@ app.post('/msg',(req,res)=>{
     for(let i=0;i<6;i++)
         if(ans[i]==-1)purchase[i]=-1;
     for(let i=0;i<6;i++)
-        if(purchase[i]>0)s+="add  ";
-        else if(purchase[i]==-1)s+="error  ";
+        if(purchase[i]>0)s+="add <br/>";
+        else if(purchase[i]==-1)s+="error <br/>";
     // res.write('<html>');
     // res.write('<body> <h1> is it working {total}</h1></body>');
     // res.write('</html>');    
     console.log(s);
     
-     res.send(s+'Total_discount:' + dis + ' Amount to pay:'+total);
+     res.send(s+'Total_discount:' + dis + '<br/> Amount to pay:'+total);
      })
 
     app.listen(9099,(res)=>{
